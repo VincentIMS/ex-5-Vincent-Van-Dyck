@@ -1,0 +1,26 @@
+/**
+* aanwezigen
+*/
+
+module.exports =  {
+    aanwezigen : {},
+
+    saveAanwezig : function(aanwezig){
+        this.aanwezigen[aanwezigheid.id]= aanwezig;
+        console.log(this.aanwezigen);
+    },
+    listAllAanwezigen : function(){
+        var rtnValue =[];
+        for (var item in this.aanwezigen) {
+            rtnValue.push(this.aanwezigen[item]);
+        };
+        return rtnValue;
+    },
+    findAanwezig : function(id){
+        return this.aanwezigen[id];
+    },
+
+    deleteAanwezig : function (id) {
+        delete this.aanwezigen[id];
+    }
+};
